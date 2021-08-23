@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+		<html lang="es">
+			<head>
+			  <meta charset="UTF-8">
+			  <title>Smart Gym Oficial</title>
+			<link rel="stylesheet" type="text/css" href="estilosv.css">
+			  <font color="#FFBF00" face="arial">
+			  	<br>
+			   <h1 align="center"><i>SMART GYM OFICIAL</i></h1>
+			</head>
+			<body>
+				<br><br>
+				<h2 align="center">BIENVENIDO A NUESTRA PÁGINA</h2>
+			  	<img src="C:\Users\Acer\OneDrive - UPB\Desktop\GYM Ensayo\smart gym.png" width="200" height="200">
+		 <style type="text/css">
+			
+			* {
+				margin:0px;
+				padding:0px;
+			}
+			
+			#header {
+				margin:auto;
+				width:500px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			
+			ul, ol {
+				list-style:none;
+			}
+			
+			.nav > li {
+				float:left;
+			}
+			
+			.nav li a {
+				background-color:black;
+				color:#fff;
+				text-decoration:none;
+				padding:11px 13px;
+				display:block;
+			}
+			
+			.nav li a:hover {
+				background-color:#434343;
+			}
+			
+			.nav li ul {
+				display:none;
+				position:absolute;
+				min-width:140px;
+			}
+			
+			.nav li:hover > ul {
+				display:block;
+			}
+			
+			.nav li ul li {
+				position:relative;
+			}
+			
+			.nav li ul li ul {
+				right:-140px;
+				top:0px;
+			}
+			</style>
+	<!-- <script language="Javascript" src="js/funciones.js"></script> -->
+
+	<script language="javascript">
+		function ComprobarDatos()
+		{
+			var DatosContacto = "";
+
+			/* para llevar a variables el contenido de las etiqietas*/
+			var Nombres = document.contact_form.nombres.value;
+			var Email   = document.contact_form.email.value;
+			var Website = document.contact_form.website.value;
+			var Mensaje = document.contact_form.mensaje.value;
+
+			/* para validar el contenido de la etiqueta nombres */
+			if (Nombres == "")
+			{ 
+			   alert("No ha digitado el nombre");
+			   return false;
+			}     
+
+			/* para validar el contenido de la etiqueta email */
+			if (Email == "")
+			{ 
+			   alert("No ha digitado el email");
+			   return false;
+			}    
+
+			/* para validar el contenido de la etiqueta website */
+			if (Website == "")
+			{ 
+			   alert("No ha digitado el website");
+			   return false;
+			}    
+
+			/* para validar el contenido de la etiqueta mensaje */
+			if (Mensaje == "")
+			{ 
+			   alert("No ha digitado el mensaje");
+			   return false;
+			}    						
+
+
+			DatosContacto = DatosContacto + "Nombres:  " + Nombres + "\n";
+			DatosContacto = DatosContacto + "Email:    " + Email + "\n";
+			DatosContacto = DatosContacto + "Website:  " + Website + "\n";
+			DatosContacto = DatosContacto + "Mensaje:  " + Mensaje;
+			alert(DatosContacto);
+			return true;
+		}
+	</script>
+
+		<script type="text/javascript">loca</script>
+		<div id="header">
+			<ul class="nav">
+				<li><a href="Pagina de Gym Ensayo.html">Inicio</a></li>
+				<li><a href="">Servicios</a>
+					<ul>
+						<li><a href="">Reservas</a></li>
+							<li><a href="">Sedes</a></li>
+							<li><a href="">Registrarse</a></li>
+							<li><a href="">Planes</a>
+							</li>
+						</li>
+					</ul>
+				</li>
+				<li><a href="">Acerca de</a>
+					<ul>
+						<li><a href="">Quienes somos</a></li>
+							<li><a href="">Ubicación</a></li>
+							<li><a href="">Smart Gym</a></li>
+					</ul>
+				</li>
+				<li><a href="Contacto_ensayo.html">Contacto</a></li>
+				
+				<li><a href="">Redes Sociales</a>
+			  <ul>
+			  	<li><a href="">Facebook</a></li>
+			  	<li><a href="">Twitter</a></li>
+			  	<li><a href="">Instagram</a></li>
+			  </ul>
+			     
+		</div>
+		<br>
+		<center><div class="articulo">
+				<article>
+				    <section id="Formulario">
+				        <form class="contact_form" action="" method="post" name="contact_form" onsubmit="return ComprobarDatos()">
+				            <ul>
+				                <li>
+				                     <span class="required_notification">* Campos requeridos</span>
+				                     
+				                </li>
+
+				                <li>
+				                	<br><br>
+				                    <label for="name"><b>Nombres:</label>
+				                    <input type="text" name="nombres" placeholder="Su Nombre" required />
+				                </li>
+
+				                <li>
+				                	<br>
+				                    <label for="email"><b>Email:</label>
+				                    <input type="email" name="email" placeholder="Mail@ejemplo.com" required />
+				                </li>
+
+				                <li>
+				                	<br>
+				                    <label for="website">Sitio web:</label>
+				                    <input type="url" name="website" placeholder="http://SmartGym.com/" required pattern="(http|https)://.+" />
+				                </li>
+
+				                <li>
+				                	<Br>
+				                    <label for="message">Mensaje:</label>
+				                    <textarea name="mensaje" cols="40" rows="6" required ></textarea>
+				                </li>
+
+				                <li>
+				                    <button class="submit" type="submit">Enviar</button></center> 
+
+				                </li>
+				            </ul>
+				        </form>
+				    </section>
+				</article>
+			</div>
+
+		</body>
+		</html>
